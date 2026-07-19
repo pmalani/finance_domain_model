@@ -100,7 +100,7 @@ classDiagram
     Order "*" -- Security
     OrderAllocation "*" -- Portfolio
     Issuer "*" -- "*" Rating
-    Universe *-- "*" ShareClass
+    Portfolio *-- "*" ShareClass
     ShareClass -- Security
     Trade "*" -- Broker
     Security "*" -- Exchange
@@ -147,4 +147,7 @@ classDiagram
     Currency *-- "*" HedgedBenchmark
     Benchmark "*" *-- BenchmarkComponent
     BenchmarkComposite *-- "*" BenchmarkComponent
+    Portfolio *-- "*" TaxLot
+    Portfolio *-- "*" Transaction
+    TradeAllocation -- "*" Transaction
 ```
