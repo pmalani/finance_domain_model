@@ -73,6 +73,14 @@ classDiagram
         class PortfolioRule
         class RuleExecution
         class RuleException
+        class RuleDetail
+        class InclusionRule
+        class ExclusionRule
+        class ConcentrationRule
+        class NetRule
+        class BenchmarkRule
+        class RatingRule
+        class GainLossRule
     }
     namespace MaterialNonPublicInformation {
         class Restriction
@@ -110,6 +118,16 @@ classDiagram
     Trade *-- "*" Fill
     Rule *-- PortfolioRule
     Portfolio *-- PortfolioRule
+    Rule <|-- InclusionRule
+    Rule <|-- ExclusionRule
+    Rule <|-- ConcentrationRule
+    Rule <|-- NetRule
+    Rule <|-- BenchmarkRule
+    Rule <|-- RatingRule
+    Rule <|-- GainLossRule
+    Rule *-- "*" RuleExecution
+    RuleExecution *-- "*" RuleDetail
+    RuleException -- RuleExecution
     Trade -- Confirmation
     Trade -- Settlement
     Security -- "*" SecurityPerformance
