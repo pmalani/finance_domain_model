@@ -81,6 +81,7 @@ classDiagram
         class BenchmarkRule
         class RatingRule
         class GainLossRule
+        class BrokerRule
     }
     namespace MaterialNonPublicInformation {
         class Restriction
@@ -125,6 +126,7 @@ classDiagram
     Rule <|-- BenchmarkRule
     Rule <|-- RatingRule
     Rule <|-- GainLossRule
+    Rule <|-- BrokerRule
     Rule *-- "*" RuleExecution
     RuleExecution *-- "*" RuleDetail
     RuleException -- RuleExecution
