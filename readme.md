@@ -49,7 +49,8 @@ classDiagram
     }
     namespace ResearchManagement {
         class Analyst
-        class Research
+        class ResearchCommentary
+        class ResearchScores
     }
     namespace Pricing {
         class Price
@@ -97,7 +98,8 @@ classDiagram
     Country "*" -- "*" Security
     Currency "*" -- "*" Security
     Manager "*" -- "*" Portfolio
-    Analyst "*" -- "*" Research
+    Analyst "*" -- "*" ResearchCommentary
+    Analyst "*" -- "*" ResearchScores
     Analyst "*" -- "*" Issuer
     Security  -- "*" Price
     PriceSource -- "*" Price
